@@ -1,0 +1,111 @@
+/* General Container */
+.all-tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Ensures max 3 boxes */
+    gap: 20px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif; /* Custom Font */
+    max-width: 100%;
+  }
+  
+  /* Tip Card Styling */
+  .tip-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e9f7ff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+  }
+  
+  .tip-card:hover {
+    transform: translateY(-5px); /* Hover effect */
+  }
+  
+  /* Image Styling */
+  .tip-image {
+    width: 150px; /* Resizing image to be smaller */
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Image shadow */
+  }
+  
+  /* Content Styling */
+  .tip-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  .tip-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff; /* Bold blue color for titles */
+    margin-bottom: 10px;
+  }
+  
+  .tip-info {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 10px;
+  }
+  
+  .tip-benefit {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 10px;
+  }
+  
+  .benefit-label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #007bff; /* Benefit label color */
+  }
+  
+  .benefit-content {
+    font-size: 14px;
+    color: #333333;
+  }
+  
+  /* Background Color for Card Variations */
+  .tip-card:nth-child(even) {
+    background-color: #e9f7ff; /* Light blue for even cards */
+  }
+  
+  .tip-card:nth-child(odd) {
+    background-color: #fdfdfe; /* Light gray for odd cards */
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 1024px) {
+    .all-tips-container {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust for medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .all-tips-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust for small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .all-tips-container {
+      grid-template-columns: 1fr; /* Single column layout for mobile screens */
+    }
+  }
+  
